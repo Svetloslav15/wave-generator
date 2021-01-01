@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Wave Generator</h1>
-<div class="container">
+<div id="container">
     <div class="el-wrapper">
         <p>Width: </p>
         <input type="number" id="width" value="700" oninput="generateWave()"/>
@@ -34,6 +34,7 @@
     <div class="el-wrapper">
         <button onclick="getClipPath()">Generate</button>
     </div>
+    <div id="message">Copied to clipboard!</div>
 </div>
 <div id="wave-container"></div>
 <div id="result"></div>

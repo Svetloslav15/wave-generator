@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
     background-color: #F7E1E0;
 }
 
 * {
     color: #ED4545;
+    font-family: 'Montserrat', sans-serif;
 }
-.container {
+#container {
     border: 1px solid #ED4545;
     border-radius: 8px;
     position: fixed;
@@ -28,14 +31,14 @@ h1 {
 }
 p {
     font-size: 20px;
-    width: 89px;
+    width: 115px;
 }
 input {
     font-size: 20px;
     border: none;
     border-bottom: 1px solid #ED4545;
     padding: 4px 31px;
-    width: 186px;
+    width: 132px;
     margin-left: 20px;
 }
 
@@ -58,10 +61,21 @@ button:hover {
 #result {
     display: none;
     color: rgb(237, 69, 69);
-    border: 2px solid rgb(237, 69, 69);
+    border: 2px solid #ED4545;
     padding: 2rem;
     font-size: 20px;
     border-radius: 8px;
     margin: 1rem;
     width: 700px;
+}
+
+#message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 25px;
+    background-color: #ED4545;
+    color: white;
+    text-transform: uppercase;
+    display: none;
 }

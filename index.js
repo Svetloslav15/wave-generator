@@ -25,8 +25,24 @@ function getClipPath() {
     let divEl = document.getElementById('result');
     divEl.style = 'display: block';
     divEl.textContent = clipPath;
+
+    const copyButton = document.createElement('button');
+    copyButton.textContent = 'Copy to clipboard';
+    copyButton.on('click', copyToClipBoard());
+    let container = document.getElementById('container');
+    container.appendChild(copyButton);
+
 }
 
+function copyToClipBoard() {
+    navigator.clipboard.writeText(clipPath);
+    let messageEl = document.getElementById('message');
+    messageEl.style = 'display: block;';
+
+    setTimeout(() => {
+        messageEl.style = 'display: none;';
+    }, 3000);
+}
 (() => {
     generateWave();
 })();
