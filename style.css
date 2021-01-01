@@ -48,7 +48,7 @@ button {
     color: white;
     padding: 12px 25px;
     border-radius: 25px;
-    margin: 24px 6px;
+    margin: 24px auto;
     cursor: pointer;
 }
 
@@ -67,6 +67,7 @@ button:hover {
     border-radius: 8px;
     margin: 1rem;
     width: 700px;
+    margin-left: 5rem;
 }
 
 #message {
@@ -80,6 +81,6 @@ button:hover {
     display: none;
 }
 
-#copyButton {
-    display: none;
+#wave-container {
+    margin-left: 5rem;
 }

@@ -19,7 +19,7 @@ function generateWave() {
     clipPath = clipPathString;
     let divEl = document.getElementById('wave-container');
     divEl.style = `width:${width_px}px;height:${height_px}px; ` + 'background-color:#ED4545; transform: rotate(180deg); ' + clipPathString;
-    copyButton.style = 'display: none;';
+    getClipPath();
 }
 
 function getClipPath() {
