@@ -7,7 +7,9 @@ body {
 * {
     color: #ED4545;
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
+
 #container {
     border: 1px solid #ED4545;
     border-radius: 8px;
@@ -29,10 +31,12 @@ h1 {
     display: flex;
     flex-flow: row;
 }
+
 p {
     font-size: 20px;
     width: 115px;
 }
+
 input {
     font-size: 20px;
     border: none;
@@ -63,7 +67,7 @@ button:hover {
     color: rgb(237, 69, 69);
     border: 2px solid #ED4545;
     padding: 2rem;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 8px;
     margin: 1rem;
     width: 700px;
@@ -83,4 +87,33 @@ button:hover {
 
 #wave-container {
     margin-left: 5rem;
+}
+
+footer {
+    background-color: #ED4545;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > p {
+    display: flex;
+    color: white;
+    flex-flow: row;
+    width: 100%;
+}
+
+footer > p > a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.fa-github {
+    color: white;
+    font-size: 30px;
 }
