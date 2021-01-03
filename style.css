@@ -93,17 +93,11 @@ footer {
     background-color: #ED4545;
     color: white;
     text-align: center;
-    padding: 1rem 2rem;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer > p {
-    display: flex;
-    color: white;
-    flex-flow: row;
-    width: 100%;
+    padding: 10px;
+    position: fixed;
+    border-radius: 50px;
+    bottom: 20px;
+    right: 20px;
 }
 
 footer > p > a {
@@ -116,4 +110,9 @@ footer > p > a {
 .fa-github {
     color: white;
     font-size: 30px;
+}
+
+footer:hover {
+    transform: scale(1.2);
+    transition: all .5s;
 }
