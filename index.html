@@ -24,15 +24,23 @@
     </div>
     <div class="el-wrapper">
         <p>Offset: </p>
-        <input type="number" id="offset" value="100" oninput="generateWave()"/>
+        <input type="number" id="offset" value="50" oninput="generateWave()"/>
     </div>
     <div class="el-wrapper">
         <p>Amplitude: </p>
-        <input type="number" id="amplitude" value="30" oninput="generateWave()"/>
+        <input type="number" id="amplitude" value="60" oninput="generateWave()"/>
     </div>
     <div class="el-wrapper">
         <p>Frequency: </p>
-        <input type="number" id="frequency" value="3" oninput="generateWave()"/>
+        <input type="number" id="frequency" value="1" oninput="generateWave()"/>
+    </div>
+    <div class="el-wrapper">
+        <p>Phase (0-180º): </p>
+        <input type="number" id="phase" value="0" oninput="generateWave()"/>
+    </div>
+    <div class="el-wrapper">
+        <p>Points generated: </p>
+        <input type="number" id="points" value="50" oninput="generateWave()"/>
     </div>
     <div class="el-wrapper">
         <button onclick="copyToClipBoard()" id="copyButton">Copy to clipboard</button>
@@ -42,7 +50,7 @@
 <div id="wave-container"></div>
 <div id="result"></div>
 <footer>
-    <a href="https://github.com/Svetloslav15/wave-generator" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/sanbec/wave-generator" target="_blank"><i class="fab fa-github"></i></a>
 </footer>
 </body>
 <script src="./index.js"></script>
