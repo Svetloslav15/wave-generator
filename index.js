@@ -5,12 +5,15 @@ function generateWave() {
     const offset = +document.getElementById('offset').value;
     const amplitude = +document.getElementById('amplitude').value;
     const frequency = +document.getElementById('frequency').value;
+    const phase = +document.querySelector('#phase').value;
+    const points = +document.querySelector('#points').value;
     const units = frequency * width_px / 100;
 
     let clipPathString = 'clip-path: polygon(100% 0%, 0% 0% ';
+    let radPhase = phase * Math.PI / 180;
 
-    for (let i = 0; i <= 100; i++) {
-        let val = offset + amplitude * Math.cos(i / units);
+    for (let i = 0; i <= points; i++) {
+        let val = offset + amplitude * Math.cos(i / units + radPhase);
         val = (val / height_px * 100).toFixed(2);
         clipPathString += ', ' + i + '% ' + val + '%';
     }
