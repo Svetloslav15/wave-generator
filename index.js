@@ -14,7 +14,7 @@ function generateWave() {
 
     for (let i = 0; i <= points; i++) {
         let val = offset + amplitude * Math.cos(i / units + radPhase);
-        val = (val / height_px * 100).toFixed(2);
+        val = (val / height_px * points).toFixed(2);
         clipPathString += ', ' + i + '% ' + val + '%';
     }
     clipPathString += ');';
