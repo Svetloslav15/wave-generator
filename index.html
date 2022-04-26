@@ -43,6 +43,10 @@
         <input type="number" id="points" value="50" min="5" max="100" step="5" oninput="generateWave()"/>
     </div>
     <div class="el-wrapper">
+        <p>Invert clip: </p>
+        <input type="checkbox" id="inverted" onchange="generateWave()"/>
+    </div>
+    <div class="el-wrapper">
         <button onclick="copyToClipBoard()" id="copyButton">Copy to clipboard</button>
     </div>
     <div id="message">Copied to clipboard!</div>
