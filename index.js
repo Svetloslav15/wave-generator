@@ -7,13 +7,13 @@ function generateWave() {
     const frequency = +document.getElementById('frequency').value;
     const phase = +document.querySelector('#phase').value;
     const points = +document.querySelector('#points').value;
-    const units = frequency * width_px / 100;
+    const units = 2 * Math.PI * frequency / points;
 
     let clipPathString = 'clip-path: polygon(100% 0%, 0% 0% ';
     let radPhase = phase * Math.PI / 180;
 
     for (let i = 0; i <= points; i++) {
-        let val = offset + amplitude * Math.cos(i / units + radPhase);
+        let val = offset + amplitude * Math.cos(i * units + radPhase);
         let valY = (val / height_px * 100).toFixed(2);
         let valX = (i * 100 / points).toFixed(2);
         clipPathString += ', ' + valX + '% ' + valY + '%';
