@@ -2,23 +2,29 @@
 
 body {
     background-color: #F7E1E0;
+    --color: #ED4545;
+    --border: 1px solid var(--color);
 }
 
 * {
-    color: #ED4545;
+    color: var(--color);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
-#container {
-    border: 1px solid #ED4545;
+
+main {
+    margin: auto;
+    width: 90vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+#controls {
+    border: var(--border);
     border-radius: 8px;
-    position: fixed;
-    top: 0;
-    right: 0;
     margin: 15px;
-    background-color: #F7E1E0;
-    z-index: 100;
 }
 
 h1 {
@@ -40,15 +46,16 @@ p {
 input {
     font-size: 20px;
     border: none;
-    border-bottom: 1px solid #ED4545;
+    border-bottom: var(--border);
     padding: 4px 31px;
     width: 132px;
     margin-left: 20px;
+    background-color: #eee3;
 }
 
 button {
-    background-color: #ED4545;
-    border: 1px solid #ED4545;
+    background-color: var(--color);
+    border: var(--border);
     color: white;
     padding: 12px 25px;
     border-radius: 25px;
@@ -58,20 +65,16 @@ button {
 
 button:hover {
     background-color: white;
-    color: #ED4545;
-    border: 1px solid #ED4545;
+    color: var(--color);
+    border: var(--border);
 }
 
 #result {
-    display: none;
-    color: rgb(237, 69, 69);
-    border: 2px solid #ED4545;
+    border: var(--border);
     padding: 2rem;
-    font-size: 15px;
     border-radius: 8px;
-    margin: 1rem;
+    margin: 1em auto;
     width: 700px;
-    margin-left: 5rem;
 }
 
 #message {
@@ -79,18 +82,19 @@ button:hover {
     top: 0;
     left: 0;
     padding: 15px 25px;
-    background-color: #ED4545;
+    background-color: var(--color);
     color: white;
     text-transform: uppercase;
     display: none;
 }
 
 #wave-container {
-    margin-left: 5rem;
+    margin: auto;
+    background-color: var(--color);
 }
 
 footer {
-    background-color: #ED4545;
+    background-color: var(--color);
     color: white;
     text-align: center;
     padding: 10px;

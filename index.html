@@ -12,11 +12,14 @@
     <link rel="icon" type="image/png" href="./favicon.jpg"/>
 </head>
 <body>
+<header>
 <h1>Wave Generator</h1>
-<div id="container">
+</header>
+<main>
+<div id="controls">
     <div class="el-wrapper">
         <p>Width: </p>
-        <input type="number" id="width" value="700" oninput="generateWave()"/>
+        <input type="number" id="width" value="700" min="200" max="950" oninput="generateWave()"/>
     </div>
     <div class="el-wrapper">
         <p>Height: </p>
@@ -51,8 +54,11 @@
     </div>
     <div id="message">Copied to clipboard!</div>
 </div>
-<div id="wave-container"></div>
-<div id="result"></div>
+<div id="display-area">
+    <div id="wave-container"></div>
+    <div id="result"></div>
+</div>
+</main>
 <footer>
     <a href="https://github.com/sanbec/wave-generator" target="_blank"><i class="fab fa-github"></i></a>
 </footer>

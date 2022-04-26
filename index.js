@@ -27,7 +27,7 @@ function generateWave() {
 
     clipPath = clipPathString;
     let divEl = document.getElementById('wave-container');
-    divEl.style = `width:${width_px}px;height:${height_px}px; ` + 'background-color:#ED4545;' + clipPathString;
+    divEl.style = `width:${width_px}px;height:${height_px}px; ` + clipPathString;
     getClipPath();
 }
 
@@ -38,7 +38,7 @@ function getClipPath() {
 
     const copyButton = document.getElementById('copyButton');
     copyButton.style = 'display: block;';
-    let container = document.getElementById('container');
+    let controls = document.getElementById('controls');
 }
 
 function copyToClipBoard() {
