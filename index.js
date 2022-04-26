@@ -7,7 +7,7 @@ function generateWave() {
     const frequency = +document.querySelector('#frequency').value;
     const phase = +document.querySelector('#phase').value;
     const points = +document.querySelector('#points').value;
-    const inverted = document.querySelector('#inverted').inverted;
+    const inverted = document.querySelector('#inverted').checked;
     const units = 2 * Math.PI * frequency / points;
     const path = 'clip-path: polygon(100% 100%, 0% 100% ';
     const invertedpath = 'clip-path: polygon(100% 0%, 0% 0% ';
