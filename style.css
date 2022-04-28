@@ -78,14 +78,16 @@ button:hover {
 }
 
 #message {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
+    top: 60px;
     padding: 15px 25px;
     background-color: var(--color);
     color: white;
     text-transform: uppercase;
     display: none;
+    width: fit-content;
+    margin: -25px auto;
+    border-radius: 10px;
 }
 
 #wave-container {
