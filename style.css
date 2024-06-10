@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-    background-color: #F7E1E0;
-    --color: #ED4545;
+    background-color: #0B1D51;
+    --color: #fff;
     --border: 1px solid var(--color);
 }
 
 * {
-    color: var(--color);
+    color: white;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 main {
     margin: auto;
@@ -56,7 +61,7 @@ input {
 button {
     background-color: var(--color);
     border: var(--border);
-    color: white;
+    color: #0B1D51;
     padding: 12px 25px;
     border-radius: 25px;
     margin: 24px auto;
@@ -65,7 +70,7 @@ button {
 
 button:hover {
     background-color: white;
-    color: var(--color);
+    color: #0B1D51;
     border: var(--border);
 }
 
@@ -82,7 +87,7 @@ button:hover {
     top: 60px;
     padding: 15px 25px;
     background-color: var(--color);
-    color: white;
+    color: #0B1D51;
     text-transform: uppercase;
     display: none;
     width: fit-content;
@@ -95,30 +100,54 @@ button:hover {
     background-color: var(--color);
 }
 
-footer {
-    background-color: var(--color);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    border-radius: 50px;
-    bottom: 20px;
-    right: 20px;
-}
 
-footer > p > a {
+.footer {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .app-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .app-name {
+    font-size: 1.5rem;
+  }
+  
+  .links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .links a i {
+    font-size: 30px;
     color: white;
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: 10px;
-}
+    margin: 0 5px;
+  }
+  .motto {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
 
 .fa-github {
-    color: white;
+    color: #0B1D51;
     font-size: 30px;
-}
-
-footer:hover {
-    transform: scale(1.2);
-    transition: all .5s;
 }
