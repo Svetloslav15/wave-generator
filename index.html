@@ -1,105 +1,209 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Wave Generator - CSS Clip Path Generator for Beautiful Waves</title>
-    <meta name="description" content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects.">
-    <meta name="keywords" content="CSS clip path, wave generator, CSS shapes, web design, CSS tools, front-end development, web development, UI design, UX design">
-    <link rel="canonical" href="https://wavegenerator.app/">
-    
+    <meta
+      name="description"
+      content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects."
+    />
+    <meta
+      name="keywords"
+      content="CSS clip path, wave generator, CSS shapes, web design, CSS tools, front-end development, web development, UI design, UX design"
+    />
+    <link rel="canonical" href="https://wavegenerator.app/" />
+
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Wave Generator - CSS Clip Path Generator for Beautiful Waves">
-    <meta property="og:description" content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects.">
-    <meta property="og:image" content="https://wavegenerator.app/path/to/your-image.jpg">
-    <meta property="og:url" content="https://wavegenerator.app/">
-    <meta property="og:type" content="website">
-  
+    <meta
+      property="og:title"
+      content="Wave Generator - CSS Clip Path Generator for Beautiful Waves"
+    />
+    <meta
+      property="og:description"
+      content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects."
+    />
+    <meta
+      property="og:image"
+      content="https://wavegenerator.app/path/to/your-image.jpg"
+    />
+    <meta property="og:url" content="https://wavegenerator.app/" />
+    <meta property="og:type" content="website" />
+
     <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Wave Generator - CSS Clip Path Generator for Beautiful Waves">
-    <meta name="twitter:description" content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects.">
-    <meta name="twitter:image" content="https://wavegenerator.app/path/to/your-image.jpg">
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-          crossorigin="anonymous"/>
-    <link rel="stylesheet" href="./style.css" type="text/css">
-    <link rel="icon" type="image/png" href="/favicon.png"/>
-</head>
-<body>
-<header>
-    <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
-    <h1>Wave Generator</h1>
-</header>
-<main>
-    <div id="controls">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Wave Generator - CSS Clip Path Generator for Beautiful Waves"
+    />
+    <meta
+      name="twitter:description"
+      content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects."
+    />
+    <meta
+      name="twitter:image"
+      content="https://wavegenerator.app/path/to/your-image.jpg"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
+      <h1>Wave Generator</h1>
+    </header>
+    <h1>
+      <a
+        class="producthunt"
+        href="https://www.producthunt.com/posts/wave-generator?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-wave&#0045;generator"
+        target="_blank"
+        ><img
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464820&theme=neutral"
+          alt="Wave&#0032;Generator - CSS&#0032;Clip&#0032;path&#0032;for&#0032;containers | Product Hunt"
+          style="width: 250px; height: 54px"
+          width="250"
+          height="54"
+      /></a>
+    </h1>
+    <main>
+      <div id="controls">
         <div class="el-wrapper">
-            <p>Width: </p>
-            <input type="number" id="width" value="700" min="200" max="950" oninput="generateWave()"/>
+          <p>Width:</p>
+          <input
+            type="number"
+            id="width"
+            value="700"
+            min="200"
+            max="950"
+            oninput="generateWave()"
+          />
         </div>
         <div class="el-wrapper">
-            <p>Height: </p>
-            <input type="number" id="height" value="300" oninput="generateWave()"/>
+          <p>Height:</p>
+          <input
+            type="number"
+            id="height"
+            value="300"
+            oninput="generateWave()"
+          />
         </div>
         <div class="el-wrapper">
-            <p>Offset: </p>
-            <input type="number" id="offset" value="150" oninput="generateWave()"/>
+          <p>Offset:</p>
+          <input
+            type="number"
+            id="offset"
+            value="150"
+            oninput="generateWave()"
+          />
         </div>
         <div class="el-wrapper">
-            <p>Amplitude: </p>
-            <input type="number" id="amplitude" value="140" oninput="generateWave()"/>
+          <p>Amplitude:</p>
+          <input
+            type="number"
+            id="amplitude"
+            value="140"
+            oninput="generateWave()"
+          />
         </div>
         <div class="el-wrapper">
-            <p>Frequency: </p>
-            <input type="number" id="frequency" value="1.50" step="0.10" min="0.10" max="10" oninput="generateWave()"/>
+          <p>Frequency:</p>
+          <input
+            type="number"
+            id="frequency"
+            value="1.50"
+            step="0.10"
+            min="0.10"
+            max="10"
+            oninput="generateWave()"
+          />
         </div>
         <div class="el-wrapper">
-            <p>Phase (0-180º): </p>
-            <input type="number" id="phase" value="0" step="5" oninput="generateWave()"/>
+          <p>Phase (0-180º):</p>
+          <input
+            type="number"
+            id="phase"
+            value="0"
+            step="5"
+            oninput="generateWave()"
+          />
         </div>
         <div class="el-wrapper">
-            <p>Points generated: </p>
-            <input type="number" id="points" value="50" min="5" max="100" step="5" oninput="generateWave()"/>
+          <p>Points generated:</p>
+          <input
+            type="number"
+            id="points"
+            value="50"
+            min="5"
+            max="100"
+            step="5"
+            oninput="generateWave()"
+          />
         </div>
         <div class="el-wrapper">
-            <p>Invert clip: </p>
-            <input type="checkbox" id="inverted" onchange="generateWave()"/>
+          <p>Invert clip:</p>
+          <input type="checkbox" id="inverted" onchange="generateWave()" />
         </div>
         <div class="el-wrapper">
-            <button onclick="copyToClipBoard()" id="copyButton">Copy to clipboard</button>
+          <button onclick="copyToClipBoard()" id="copyButton">
+            Copy to clipboard
+          </button>
         </div>
-    </div>
-    <div id="display-area">
+      </div>
+      <div id="display-area">
         <div id="wave-container"></div>
         <div>
-            <div id="message">Copied to clipboard!</div>
-            <div id="result"></div>
+          <div id="message">Copied to clipboard!</div>
+          <div id="result"></div>
         </div>
-    </div>
-</main>
-<footer class="footer">
-    <div class="footer-content">
-      <div class="app-info">
-        <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
-        <h2 class="app-name">Wave Generator</h2>
       </div>
-      <div class="links">
-        <a href="https://github.com/Svetloslav15/wave-generator" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.buymeacoffee.com/svetloslav" target="_blank" rel="noopener noreferrer">
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="app-info">
+          <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
+          <h2 class="app-name">Wave Generator</h2>
+        </div>
+        <div class="links">
+          <a
+            href="https://github.com/Svetloslav15/wave-generator"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/svetloslav"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fas fa-coffee"></i>
-        </a>
-        <a href="https://novoselski.net/" target="_blank" rel="noopener noreferrer">
+          </a>
+          <a
+            href="https://novoselski.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fas">SN</i>
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-    <p class="motto">&lt; Turning code into art /&gt;</p>
-  </footer>
-</body>
-<script src="./index.js"></script>
-<script defer data-domain="wavegenerator.app" src="https://plausible.io/js/script.js"></script>
+      <p class="motto">&lt; Turning code into art /&gt;</p>
+    </footer>
+  </body>
+  <script src="./index.js"></script>
+  <script
+    defer
+    data-domain="wavegenerator.app"
+    src="https://plausible.io/js/script.js"
+  ></script>
 </html>

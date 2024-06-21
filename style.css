@@ -18,6 +18,10 @@ header {
     justify-content: center;
 }
 
+.producthunt {
+  margin: 0 auto;
+}
+
 main {
     margin: auto;
     width: 90vw;
