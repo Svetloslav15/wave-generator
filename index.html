@@ -56,151 +56,226 @@
     />
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1653596795899638"
-     crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1653596795899638"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
-      <h1>Wave Generator</h1>
-    </header>
-    <h1>
-      <a
-        class="producthunt"
-        href="https://www.producthunt.com/posts/wave-generator?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-wave&#0045;generator"
-        target="_blank"
-        ><img
-          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464820&theme=neutral"
-          alt="Wave&#0032;Generator - CSS&#0032;Clip&#0032;path&#0032;for&#0032;containers | Product Hunt"
-          style="width: 250px; height: 54px"
-          width="250"
-          height="54"
-      /></a>
-    </h1>
-    <main>
-      <div id="controls">
-        <div class="el-wrapper">
-          <p>Width:</p>
-          <input
-            type="number"
-            id="width"
-            value="700"
-            min="200"
-            max="950"
-            oninput="generateWave()"
-          />
-        </div>
-        <div class="el-wrapper">
-          <p>Height:</p>
-          <input
-            type="number"
-            id="height"
-            value="300"
-            oninput="generateWave()"
-          />
-        </div>
-        <div class="el-wrapper">
-          <p>Offset:</p>
-          <input
-            type="number"
-            id="offset"
-            value="150"
-            oninput="generateWave()"
-          />
-        </div>
-        <div class="el-wrapper">
-          <p>Amplitude:</p>
-          <input
-            type="number"
-            id="amplitude"
-            value="140"
-            oninput="generateWave()"
-          />
-        </div>
-        <div class="el-wrapper">
-          <p>Frequency:</p>
-          <input
-            type="number"
-            id="frequency"
-            value="1.50"
-            step="0.10"
-            min="0.10"
-            max="10"
-            oninput="generateWave()"
-          />
-        </div>
-        <div class="el-wrapper">
-          <p>Phase (0-180º):</p>
-          <input
-            type="number"
-            id="phase"
-            value="0"
-            step="5"
-            oninput="generateWave()"
-          />
-        </div>
-        <div class="el-wrapper">
-          <p>Points generated:</p>
-          <input
-            type="number"
-            id="points"
-            value="50"
-            min="5"
-            max="100"
-            step="5"
-            oninput="generateWave()"
-          />
-        </div>
-        <div class="el-wrapper">
-          <p>Invert clip:</p>
-          <input type="checkbox" id="inverted" onchange="generateWave()" />
-        </div>
-        <div class="el-wrapper">
-          <button onclick="copyToClipBoard()" id="copyButton">
-            Copy to clipboard
-          </button>
-        </div>
-      </div>
-      <div id="display-area">
-        <div id="wave-container"></div>
-        <div>
-          <div id="message">Copied to clipboard!</div>
-          <div id="result"></div>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="app-info">
+    <div class="page-wrapper">
+      <aside class="ad-sidebar">
+        <a
+          href="https://buy.stripe.com/aFa14nd7U1f3aTG50b5c401"
+          class="ad-block"
+          target="_blank"
+        >
+          <div class="ad-icon">📢</div>
+          <div class="ad-text">Promote yourself here</div>
+          <div class="ad-price">$10</div>
+          <div class="ad-period">per month</div>
+        </a>
+
+        <a
+          href="https://buy.stripe.com/aFa14nd7U1f3aTG50b5c401"
+          class="ad-block"
+          target="_blank"
+        >
+          <div class="ad-icon">📢</div>
+          <div class="ad-text">Promote yourself here</div>
+          <div class="ad-price">$10</div>
+          <div class="ad-period">per month</div>
+        </a>
+
+        <a
+          href="https://buy.stripe.com/aFa14nd7U1f3aTG50b5c401"
+          class="ad-block"
+          target="_blank"
+        >
+          <div class="ad-icon">📢</div>
+          <div class="ad-text">Promote yourself here</div>
+          <div class="ad-price">$10</div>
+          <div class="ad-period">per month</div>
+        </a>
+      </aside>
+      <div class="main-content">
+        <header>
           <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
-          <h2 class="app-name">Wave Generator</h2>
-        </div>
-        <div class="links">
+          <h1>Wave Generator</h1>
+        </header>
+        <h1>
           <a
-            href="https://github.com/Svetloslav15/wave-generator"
+            class="producthunt"
+            href="https://www.producthunt.com/posts/wave-generator?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-wave&#0045;generator"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://www.buymeacoffee.com/svetloslav"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fas fa-coffee"></i>
-          </a>
-          <a
-            href="https://novoselski.net/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fas">SN</i>
-          </a>
-        </div>
+            ><img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464820&theme=neutral"
+              alt="Wave&#0032;Generator - CSS&#0032;Clip&#0032;path&#0032;for&#0032;containers | Product Hunt"
+              style="width: 250px; height: 54px"
+              width="250"
+              height="54"
+          /></a>
+        </h1>
+        <main>
+          <div id="controls">
+            <div class="el-wrapper">
+              <p>Width:</p>
+              <input
+                type="number"
+                id="width"
+                value="700"
+                min="200"
+                max="950"
+                oninput="generateWave()"
+              />
+            </div>
+            <div class="el-wrapper">
+              <p>Height:</p>
+              <input
+                type="number"
+                id="height"
+                value="300"
+                oninput="generateWave()"
+              />
+            </div>
+            <div class="el-wrapper">
+              <p>Offset:</p>
+              <input
+                type="number"
+                id="offset"
+                value="150"
+                oninput="generateWave()"
+              />
+            </div>
+            <div class="el-wrapper">
+              <p>Amplitude:</p>
+              <input
+                type="number"
+                id="amplitude"
+                value="140"
+                oninput="generateWave()"
+              />
+            </div>
+            <div class="el-wrapper">
+              <p>Frequency:</p>
+              <input
+                type="number"
+                id="frequency"
+                value="1.50"
+                step="0.10"
+                min="0.10"
+                max="10"
+                oninput="generateWave()"
+              />
+            </div>
+            <div class="el-wrapper">
+              <p>Phase (0-180º):</p>
+              <input
+                type="number"
+                id="phase"
+                value="0"
+                step="5"
+                oninput="generateWave()"
+              />
+            </div>
+            <div class="el-wrapper">
+              <p>Points generated:</p>
+              <input
+                type="number"
+                id="points"
+                value="50"
+                min="5"
+                max="100"
+                step="5"
+                oninput="generateWave()"
+              />
+            </div>
+            <div class="el-wrapper">
+              <p>Invert clip:</p>
+              <input type="checkbox" id="inverted" onchange="generateWave()" />
+            </div>
+            <div class="el-wrapper">
+              <button onclick="copyToClipBoard()" id="copyButton">
+                Copy to clipboard
+              </button>
+            </div>
+          </div>
+          <div id="display-area">
+            <div id="wave-container"></div>
+            <div>
+              <div id="message">Copied to clipboard!</div>
+              <div id="result"></div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="app-info">
+              <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
+              <h2 class="app-name">Wave Generator</h2>
+            </div>
+            <div class="links">
+              <a
+                href="https://github.com/Svetloslav15/wave-generator"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.buymeacoffee.com/svetloslav"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-coffee"></i>
+              </a>
+              <a
+                href="https://novoselski.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas">SN</i>
+              </a>
+            </div>
+          </div>
+          <p class="motto">&lt; Turning code into art /&gt;</p>
+        </footer>
       </div>
-      <p class="motto">&lt; Turning code into art /&gt;</p>
-    </footer>
+      <aside class="ad-sidebar">
+        <a
+          href="https://buy.stripe.com/aFa14nd7U1f3aTG50b5c401"
+          class="ad-block"
+          target="_blank"
+        >
+          <div class="ad-icon">📢</div>
+          <div class="ad-text">Promote yourself here</div>
+          <div class="ad-price">$10</div>
+          <div class="ad-period">per month</div>
+        </a>
+
+        <a
+          href="https://buy.stripe.com/aFa14nd7U1f3aTG50b5c401"
+          class="ad-block"
+          target="_blank"
+        >
+          <div class="ad-icon">📢</div>
+          <div class="ad-text">Promote yourself here</div>
+          <div class="ad-price">$10</div>
+          <div class="ad-period">per month</div>
+        </a>
+
+        <a
+          href="https://buy.stripe.com/aFa14nd7U1f3aTG50b5c401"
+          class="ad-block"
+          target="_blank"
+        >
+          <div class="ad-icon">📢</div>
+          <div class="ad-text">Promote yourself here</div>
+          <div class="ad-price">$10</div>
+          <div class="ad-period">per month</div>
+        </a>
+      </aside>
+    </div>
   </body>
   <script src="./index.js"></script>
   <script

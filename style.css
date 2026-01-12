@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
-    background-color: #0B1D51;
-    --color: #fff;
-    --border: 1px solid var(--color);
+  background-color: #0b1d51;
+  --color: #fff;
+  --border: 1px solid var(--color);
 }
 
 * {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .producthunt {
@@ -23,135 +23,198 @@ header {
 }
 
 main {
-    margin: auto;
-    width: 90vw;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 }
 
 #controls {
-    border: var(--border);
-    border-radius: 8px;
-    margin: 15px;
+  border: var(--border);
+  border-radius: 8px;
+  margin: 15px;
 }
 
 h1 {
-    text-align: center;
-    margin: 2rem 0;
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .el-wrapper {
-    margin: 1rem;
-    display: flex;
-    flex-flow: row;
+  margin: 1rem;
+  display: flex;
+  flex-flow: row;
 }
 
 p {
-    font-size: 20px;
-    width: 115px;
+  font-size: 20px;
+  width: 115px;
 }
 
 input {
-    font-size: 20px;
-    border: none;
-    border-bottom: var(--border);
-    padding: 4px 31px;
-    width: 132px;
-    margin-left: 20px;
-    background-color: #eee3;
+  font-size: 20px;
+  border: none;
+  border-bottom: var(--border);
+  padding: 4px 31px;
+  width: 132px;
+  margin-left: 20px;
+  background-color: #eee3;
 }
 
 button {
-    background-color: var(--color);
-    border: var(--border);
-    color: #0B1D51;
-    padding: 12px 25px;
-    border-radius: 25px;
-    margin: 24px auto;
-    cursor: pointer;
+  background-color: var(--color);
+  border: var(--border);
+  color: #0b1d51;
+  padding: 12px 25px;
+  border-radius: 25px;
+  margin: 24px auto;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: white;
-    color: #0B1D51;
-    border: var(--border);
+  background-color: white;
+  color: #0b1d51;
+  border: var(--border);
 }
 
 #result {
-    border: var(--border);
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 1em auto;
-    width: 700px;
+  border: var(--border);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1em auto;
+  width: 700px;
 }
 
 #message {
-    position: relative;
-    top: 60px;
-    padding: 15px 25px;
-    background-color: var(--color);
-    color: #0B1D51;
-    text-transform: uppercase;
-    display: none;
-    width: fit-content;
-    margin: -25px auto;
-    border-radius: 10px;
+  position: relative;
+  top: 60px;
+  padding: 15px 25px;
+  background-color: var(--color);
+  color: #0b1d51;
+  text-transform: uppercase;
+  display: none;
+  width: fit-content;
+  margin: -25px auto;
+  border-radius: 10px;
 }
 
 #wave-container {
-    margin: auto;
-    background-color: var(--color);
+  margin: auto;
+  background-color: var(--color);
 }
 
-
 .footer {
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .app-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .app-name {
-    font-size: 1.5rem;
-  }
-  
-  .links {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .links a i {
-    font-size: 30px;
-    color: white;
-    margin: 0 5px;
-  }
-  .motto {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-  }
-  
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-info {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.app-name {
+  font-size: 1.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.links a i {
+  font-size: 30px;
+  color: white;
+  margin: 0 5px;
+}
+.motto {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
 
 .fa-github {
-    color: #0B1D51;
-    font-size: 30px;
+  color: #0b1d51;
+  font-size: 30px;
+}
+
+.page-wrapper {
+  display: flex;
+  gap: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.ad-sidebar {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+.ad-block {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  border: 3px dashed #cbd5e0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.ad-block:hover {
+  border-color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ad-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  opacity: 0.3;
+}
+
+.ad-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.ad-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 5px;
+}
+
+.ad-period {
+  font-size: 13px;
+  color: #718096;
 }
