@@ -159,6 +159,7 @@ button:hover {
   max-width: 1600px;
   margin: 0 auto;
   align-items: start;
+  justify-content: space-around;
 }
 
 .ad-sidebar {
