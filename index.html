@@ -66,10 +66,10 @@
     <div class="page-wrapper">
       <div class="main-content">
         <header>
-          <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
-          <h1>Wave Generator</h1>
-        </header>
-        <h1>
+          <div class="header-top">
+            <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
+            <h1>Wave Generator</h1>
+          </div>
           <a
             class="producthunt"
             href="https://www.producthunt.com/posts/wave-generator?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-wave&#0045;generator"
@@ -81,99 +81,195 @@
               width="250"
               height="54"
           /></a>
-        </h1>
+        </header>
+
         <main>
           <div id="controls">
-            <div class="el-wrapper">
-              <p>Width:</p>
-              <input
-                type="number"
-                id="width"
-                value="700"
-                min="200"
-                max="950"
-                oninput="generateWave()"
-              />
+            <div class="control-group">
+              <h3 class="group-title">Dimensions</h3>
+              <div class="el-wrapper">
+                <label for="width">Width</label>
+                <input
+                  type="range"
+                  id="width-range"
+                  min="200"
+                  max="950"
+                  value="700"
+                  oninput="syncInput('width', this.value)"
+                />
+                <input
+                  type="number"
+                  id="width"
+                  value="700"
+                  min="200"
+                  max="950"
+                  oninput="syncRange('width', this.value)"
+                />
+              </div>
+              <div class="el-wrapper">
+                <label for="height">Height</label>
+                <input
+                  type="range"
+                  id="height-range"
+                  min="50"
+                  max="600"
+                  value="300"
+                  oninput="syncInput('height', this.value)"
+                />
+                <input
+                  type="number"
+                  id="height"
+                  value="300"
+                  min="50"
+                  max="600"
+                  oninput="syncRange('height', this.value)"
+                />
+              </div>
             </div>
-            <div class="el-wrapper">
-              <p>Height:</p>
-              <input
-                type="number"
-                id="height"
-                value="300"
-                oninput="generateWave()"
-              />
+
+            <div class="control-group">
+              <h3 class="group-title">Wave Shape</h3>
+              <div class="el-wrapper">
+                <label for="offset">Offset</label>
+                <input
+                  type="range"
+                  id="offset-range"
+                  min="0"
+                  max="400"
+                  value="150"
+                  oninput="syncInput('offset', this.value)"
+                />
+                <input
+                  type="number"
+                  id="offset"
+                  value="150"
+                  min="0"
+                  max="400"
+                  oninput="syncRange('offset', this.value)"
+                />
+              </div>
+              <div class="el-wrapper">
+                <label for="amplitude">Amplitude</label>
+                <input
+                  type="range"
+                  id="amplitude-range"
+                  min="0"
+                  max="300"
+                  value="140"
+                  oninput="syncInput('amplitude', this.value)"
+                />
+                <input
+                  type="number"
+                  id="amplitude"
+                  value="140"
+                  min="0"
+                  max="300"
+                  oninput="syncRange('amplitude', this.value)"
+                />
+              </div>
+              <div class="el-wrapper">
+                <label for="frequency">Frequency</label>
+                <input
+                  type="range"
+                  id="frequency-range"
+                  min="0.10"
+                  max="10"
+                  step="0.10"
+                  value="1.50"
+                  oninput="syncInput('frequency', this.value)"
+                />
+                <input
+                  type="number"
+                  id="frequency"
+                  value="1.50"
+                  step="0.10"
+                  min="0.10"
+                  max="10"
+                  oninput="syncRange('frequency', this.value)"
+                />
+              </div>
+              <div class="el-wrapper">
+                <label for="phase">Phase (0-180&deg;)</label>
+                <input
+                  type="range"
+                  id="phase-range"
+                  min="0"
+                  max="180"
+                  step="5"
+                  value="0"
+                  oninput="syncInput('phase', this.value)"
+                />
+                <input
+                  type="number"
+                  id="phase"
+                  value="0"
+                  step="5"
+                  min="0"
+                  max="180"
+                  oninput="syncRange('phase', this.value)"
+                />
+              </div>
+              <div class="el-wrapper">
+                <label for="points">Points</label>
+                <input
+                  type="range"
+                  id="points-range"
+                  min="5"
+                  max="100"
+                  step="5"
+                  value="50"
+                  oninput="syncInput('points', this.value)"
+                />
+                <input
+                  type="number"
+                  id="points"
+                  value="50"
+                  min="5"
+                  max="100"
+                  step="5"
+                  oninput="syncRange('points', this.value)"
+                />
+              </div>
             </div>
-            <div class="el-wrapper">
-              <p>Offset:</p>
-              <input
-                type="number"
-                id="offset"
-                value="150"
-                oninput="generateWave()"
-              />
+
+            <div class="control-group">
+              <h3 class="group-title">Options</h3>
+              <div class="el-wrapper toggle-row">
+                <label for="inverted">Invert clip</label>
+                <label class="toggle">
+                  <input type="checkbox" id="inverted" onchange="generateWave()" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="el-wrapper">
+                <label for="waveColor">Preview color</label>
+                <input
+                  type="color"
+                  id="waveColor"
+                  value="#ffffff"
+                  oninput="updateWaveColor(this.value)"
+                />
+              </div>
             </div>
-            <div class="el-wrapper">
-              <p>Amplitude:</p>
-              <input
-                type="number"
-                id="amplitude"
-                value="140"
-                oninput="generateWave()"
-              />
-            </div>
-            <div class="el-wrapper">
-              <p>Frequency:</p>
-              <input
-                type="number"
-                id="frequency"
-                value="1.50"
-                step="0.10"
-                min="0.10"
-                max="10"
-                oninput="generateWave()"
-              />
-            </div>
-            <div class="el-wrapper">
-              <p>Phase (0-180º):</p>
-              <input
-                type="number"
-                id="phase"
-                value="0"
-                step="5"
-                oninput="generateWave()"
-              />
-            </div>
-            <div class="el-wrapper">
-              <p>Points generated:</p>
-              <input
-                type="number"
-                id="points"
-                value="50"
-                min="5"
-                max="100"
-                step="5"
-                oninput="generateWave()"
-              />
-            </div>
-            <div class="el-wrapper">
-              <p>Invert clip:</p>
-              <input type="checkbox" id="inverted" onchange="generateWave()" />
-            </div>
-            <div class="el-wrapper">
-              <button onclick="copyToClipBoard()" id="copyButton">
-                Copy to clipboard
+
+            <div class="control-actions">
+              <button onclick="randomizeWave()" id="randomizeButton" class="btn btn-secondary">
+                <i class="fas fa-dice"></i> Randomize
+              </button>
+              <button onclick="copyToClipBoard()" id="copyButton" class="btn btn-primary">
+                <i class="fas fa-copy"></i> Copy to clipboard
               </button>
             </div>
           </div>
+
           <div id="display-area">
             <div id="wave-container"></div>
-            <div>
-              <div id="message">Copied to clipboard!</div>
+            <div class="result-wrapper">
               <div id="result"></div>
             </div>
           </div>
         </main>
+
         <footer class="footer">
           <div class="footer-content">
             <div class="app-info">
