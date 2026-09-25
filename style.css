@@ -708,3 +708,73 @@ input[type="color"]::-webkit-color-swatch {
     margin-top: 14px;
   }
 }
+
+/* ── Info / FAQ Section ── */
+.info {
+  max-width: 800px;
+  margin: 32px auto 0;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+.info h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+}
+
+.info h2:first-child {
+  margin-top: 0;
+}
+
+.info p,
+.info li {
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+.info p *,
+.info li * {
+  color: inherit;
+}
+
+.info strong {
+  color: var(--color);
+}
+
+.info ol {
+  padding-left: 20px;
+}
+
+.info li + li {
+  margin-top: 6px;
+}
+
+.info code {
+  font-family: "Courier New", Courier, monospace;
+  color: #a5d6ff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.info details {
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  padding: 12px 16px;
+}
+
+.info details + details {
+  margin-top: 8px;
+}
+
+.info summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.info details p {
+  margin-top: 8px;
+}
