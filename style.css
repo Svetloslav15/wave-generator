@@ -261,6 +261,44 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 50%;
 }
 
+/* ── Select ── */
+.select-row {
+  grid-template-columns: 110px 1fr !important;
+}
+
+select {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 8px;
+  width: 100%;
+  background-color: var(--bg-secondary);
+  color: var(--color);
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition), background-color var(--transition);
+}
+
+select:hover {
+  background-color: var(--bg-hover);
+}
+
+select:focus {
+  border-color: var(--accent);
+}
+
+select option {
+  background-color: var(--bg-primary);
+}
+
+.hint {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-muted);
+  margin-top: -2px;
+}
+
 /* ── Buttons ── */
 .control-actions {
   display: flex;
@@ -645,6 +683,10 @@ input[type="color"]::-webkit-color-swatch {
   .toggle-row label {
     grid-column: 1;
     margin-bottom: 0;
+  }
+
+  .select-row {
+    grid-template-columns: 1fr !important;
   }
 
   input[type="number"] {

@@ -1,29 +1,67 @@
 let clipPath = '';
 
+const UNIT_HINTS = {
+    '%': 'The wave stretches with the element\'s width and height.',
+    'px': 'The wave keeps its pixel depth on any element height. Width still stretches.',
+    'vw': 'The wave scales with the page width and keeps its shape. Use on full-width sections.',
+};
+
+// Phase that puts a crest (or a trough when inverted) in the middle of the width.
+function centeredPhase(frequency, inverted) {
+    const target = inverted ? 0 : 180;
+    return (((target - 180 * frequency) % 360) + 360) % 360;
+}
+
+// Formats a y coordinate (px from the top of a width x height box) in the chosen unit.
+// px and vw are measured from the edge the wave belongs to, so the depth stays fixed.
+function formatY(y, width, height, inverted, unit) {
+    if (unit === 'px') {
+        return inverted ? `calc(100% - ${(height - y).toFixed(2)}px)` : `${y.toFixed(2)}px`;
+    }
+    if (unit === 'vw') {
+        return inverted
+            ? `calc(100% - ${((height - y) / width * 100).toFixed(2)}vw)`
+            : `${(y / width * 100).toFixed(2)}vw`;
+    }
+    return (y / height * 100).toFixed(2) + '%';
+}
+
 function generateWave() {
     const width_px = +document.querySelector('#width').value;
     const height_px = +document.querySelector('#height').value;
     const offset = +document.querySelector('#offset').value;
     const amplitude = +document.querySelector('#amplitude').value;
     const frequency = +document.querySelector('#frequency').value;
-    const phase = +document.querySelector('#phase').value;
     const points = +document.querySelector('#points').value;
     const inverted = document.querySelector('#inverted').checked;
+    const centered = document.querySelector('#centered').checked;
+    const unit = document.querySelector('#units').value;
     const units = 2 * Math.PI * frequency / points;
     const path = 'clip-path: polygon(100% 100%, 0% 100% ';
     const invertedpath = 'clip-path: polygon(100% 0%, 0% 0% ';
 
-    let clipPathString = path;
-    if (inverted) clipPathString = invertedpath;
+    let phase = +document.querySelector('#phase').value;
+    if (centered) {
+        phase = centeredPhase(frequency, inverted);
+        document.getElementById('phase').value = +phase.toFixed(2);
+        document.getElementById('phase-range').value = phase;
+    }
+    document.getElementById('phase').disabled = centered;
+    document.getElementById('phase-range').disabled = centered;
+    document.getElementById('units-hint').textContent = UNIT_HINTS[unit];
+
+    let previewPath = inverted ? invertedpath : path;
+    let clipPathString = previewPath;
 
     let radPhase = phase * Math.PI / 180;
 
     for (let i = 0; i <= points; i++) {
         let val = offset + amplitude * Math.cos(i * units + radPhase);
-        let valY = (val / height_px * 100).toFixed(2);
-        let valX = (i * 100 / points).toFixed(2);
-        clipPathString += ', ' + valX + '% ' + valY + '%';
+        let valX = (i * 100 / points).toFixed(2) + '%';
+        previewPath += ', ' + valX + ' ' + formatY(val, width_px, height_px, inverted, '%');
+        clipPathString += ', ' + valX + ' ' + formatY(val, width_px, height_px, inverted, unit);
     }
+    previewPath += ');';
     clipPathString += ');';
 
     clipPath = clipPathString;
@@ -34,7 +72,8 @@ function generateWave() {
     const renderWidth = Math.min(width_px, maxWidth);
     const scale = renderWidth / width_px;
     const renderHeight = Math.round(height_px * scale);
-    divEl.style = `width:${renderWidth}px;height:${renderHeight}px;background-color:${waveColor}; ` + clipPathString;
+    // The preview is scaled to fit, so it always uses the percentage version of the path.
+    divEl.style = `width:${renderWidth}px;height:${renderHeight}px;background-color:${waveColor}; ` + previewPath;
     getClipPath();
 }
 
