@@ -1,0 +1,45 @@
+# Wave Generator
+
+> Wave Generator (https://wavegenerator.app/) is a free, browser-based tool that generates a CSS `clip-path: polygon()` declaration which cuts a smooth sine wave into the edge of an HTML element. It has a live preview and a one-click copy, and needs no sign-up, SVG or images.
+
+Use it to add wavy edges to hero sections, section dividers, cards, headers and footers with pure CSS. All points are percentages, so the wave scales with the element it is applied to.
+
+## Parameters
+
+- **Width** (200–950 px) and **Height** (50–600 px): the preview element's size. Height is used to convert the wave into percentages.
+- **Offset** (0–400 px): vertical position of the wave's centre line.
+- **Amplitude** (0–300 px): how far the wave rises and falls from the centre line.
+- **Frequency** (0.1–10): number of full wave cycles across the width.
+- **Phase** (0–180°): horizontal shift of the wave.
+- **Points** (5–100): number of polygon points. More points give a smoother curve.
+- **Invert clip**: anchors the polygon to the top edge instead of the bottom, so the wave sits on top of the element.
+- **Randomize**: picks random values for all parameters.
+
+## How the wave is computed
+
+For each point `i` from `0` to `points`, the generator computes `y = offset + amplitude * cos(i * 2π * frequency / points + phase)`, converts `x` and `y` to percentages of width and height, and appends them to a polygon that starts at `100% 100%, 0% 100%` (or `100% 0%, 0% 0%` when inverted).
+
+## Example output
+
+Height 300, offset 150, amplitude 140, frequency 1.5, phase 0, points 10:
+
+```css
+.hero {
+  clip-path: polygon(100% 100%, 0% 100% , 0.00% 96.67%, 10.00% 77.43%, 20.00% 35.58%, 30.00% 5.62%, 40.00% 12.25%, 50.00% 50.00%, 60.00% 87.75%, 70.00% 94.38%, 80.00% 64.42%, 90.00% 22.57%, 100.00% 3.33%);
+}
+```
+
+## Browser support
+
+`clip-path: polygon()` is supported in all modern browsers (Chrome, Firefox, Safari, Edge).
+
+## Links
+
+- [Wave Generator app](https://wavegenerator.app/): the tool itself
+- [Source code on GitHub](https://github.com/Svetloslav15/wave-generator): open-source repository
+- [Product Hunt listing](https://www.producthunt.com/posts/wave-generator)
+
+## Optional
+
+- [Author: Svetloslav Novoselski](https://novoselski.net/)
+- [Buy Me a Coffee](https://www.buymeacoffee.com/svetloslav): support the project

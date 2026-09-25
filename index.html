@@ -1,52 +1,126 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Wave Generator - CSS Clip Path Generator for Beautiful Waves</title>
+    <title>Wave Generator - Free CSS Clip Path Wave Generator</title>
     <meta
       name="description"
-      content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects."
+      content="Free online CSS wave generator. Tune amplitude, frequency, phase and offset, preview live, and copy a ready-to-use clip-path: polygon() wave for any container. No SVG or images needed."
     />
     <meta
       name="keywords"
-      content="CSS clip path, wave generator, CSS shapes, web design, CSS tools, front-end development, web development, UI design, UX design"
+      content="CSS wave generator, CSS clip path, clip-path polygon, wave divider, CSS shapes, section divider, web design, CSS tools, front-end development"
     />
+    <meta name="author" content="Svetloslav Novoselski" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0b1d51" />
     <link rel="canonical" href="https://wavegenerator.app/" />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <!-- Open Graph Tags -->
+    <meta property="og:site_name" content="Wave Generator" />
+    <meta property="og:locale" content="en_US" />
     <meta
       property="og:title"
-      content="Wave Generator - CSS Clip Path Generator for Beautiful Waves"
+      content="Wave Generator - Free CSS Clip Path Wave Generator"
     />
     <meta
       property="og:description"
-      content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects."
+      content="Tune amplitude, frequency, phase and offset, preview live, and copy a ready-to-use CSS clip-path wave for any container."
     />
-    <meta
-      property="og:image"
-      content="https://wavegenerator.app/path/to/your-image.jpg"
-    />
+    <meta property="og:image" content="https://wavegenerator.app/logo.png" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:alt" content="Wave Generator logo" />
     <meta property="og:url" content="https://wavegenerator.app/" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
-      content="Wave Generator - CSS Clip Path Generator for Beautiful Waves"
+      content="Wave Generator - Free CSS Clip Path Wave Generator"
     />
     <meta
       name="twitter:description"
-      content="Generate beautiful CSS clip path waves effortlessly with Wave Generator. Perfect for web designers and developers looking to add dynamic shapes to their projects."
+      content="Tune amplitude, frequency, phase and offset, preview live, and copy a ready-to-use CSS clip-path wave for any container."
     />
-    <meta
-      name="twitter:image"
-      content="https://wavegenerator.app/path/to/your-image.jpg"
-    />
+    <meta name="twitter:image" content="https://wavegenerator.app/logo.png" />
+    <meta name="twitter:image:alt" content="Wave Generator logo" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://wavegenerator.app/#app",
+            "name": "Wave Generator",
+            "url": "https://wavegenerator.app/",
+            "description": "Free online tool that generates CSS clip-path polygon waves for HTML containers, with live preview and one-click copy.",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires a modern web browser with JavaScript enabled.",
+            "image": "https://wavegenerator.app/logo.png",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "featureList": [
+              "Live wave preview",
+              "Adjustable width, height, offset, amplitude, frequency, phase and point count",
+              "Inverted clip for top-edge waves",
+              "Randomize wave parameters",
+              "Copy CSS clip-path to clipboard"
+            ],
+            "author": {
+              "@type": "Person",
+              "name": "Svetloslav Novoselski",
+              "url": "https://novoselski.net/"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I use the generated CSS wave?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Click \"Copy to clipboard\" and paste the clip-path declaration into the CSS rule of the element you want to shape, such as a hero section or a footer. The points are in percentages, so the wave scales with the element."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the CSS clip-path wave work in all browsers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. clip-path: polygon() is supported in all modern browsers, including Chrome, Firefox, Safari and Edge."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I put the wave on the top edge instead of the bottom?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Turn on \"Invert clip\". The polygon is then anchored to the top of the element instead of the bottom."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Wave Generator free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Wave Generator is free to use, with no sign-up, and the generated CSS can be used in personal and commercial projects."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
 
     <link
       rel="stylesheet"
@@ -56,6 +130,7 @@
     />
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1653596795899638"
@@ -67,13 +142,20 @@
       <div class="main-content">
         <header>
           <div class="header-top">
-            <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
+            <img
+              src="/logo.png"
+              alt="Wave Generator logo"
+              class="logo"
+              width="50"
+              height="50"
+            />
             <h1>Wave Generator</h1>
           </div>
           <a
             class="producthunt"
             href="https://www.producthunt.com/posts/wave-generator?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-wave&#0045;generator"
             target="_blank"
+            rel="noopener noreferrer"
             ><img
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464820&theme=neutral"
               alt="Wave&#0032;Generator - CSS&#0032;Clip&#0032;path&#0032;for&#0032;containers | Product Hunt"
@@ -262,7 +344,7 @@
             </div>
           </div>
 
-          <div id="display-area">
+          <div id="display-area" aria-label="Wave preview and generated CSS">
             <div id="wave-container"></div>
             <div class="result-wrapper">
               <div id="result"></div>
@@ -270,10 +352,84 @@
           </div>
         </main>
 
+        <section class="info" aria-labelledby="about-title">
+          <h2 id="about-title">Free CSS wave generator</h2>
+          <p>
+            Wave Generator creates a CSS <code>clip-path: polygon()</code> that
+            cuts a smooth wave into the edge of any container. It works for
+            hero sections, section dividers, cards and footers, and needs no
+            SVG, images or extra markup.
+          </p>
+
+          <h2>How to create a CSS wave</h2>
+          <ol>
+            <li>
+              Set the <strong>width</strong> and <strong>height</strong> of the
+              element you want to shape.
+            </li>
+            <li>
+              Shape the wave: <strong>offset</strong> moves it up or down,
+              <strong>amplitude</strong> sets its height,
+              <strong>frequency</strong> sets how many waves fit across,
+              <strong>phase</strong> shifts it sideways and
+              <strong>points</strong> controls how smooth it is.
+            </li>
+            <li>
+              Turn on <strong>Invert clip</strong> to put the wave on the top
+              edge instead of the bottom, or press
+              <strong>Randomize</strong> for a starting point.
+            </li>
+            <li>
+              Press <strong>Copy to clipboard</strong> and paste the
+              <code>clip-path</code> line into your CSS.
+            </li>
+          </ol>
+
+          <h2>Frequently asked questions</h2>
+          <details>
+            <summary>How do I use the generated CSS wave?</summary>
+            <p>
+              Click "Copy to clipboard" and paste the clip-path declaration into
+              the CSS rule of the element you want to shape, such as a hero
+              section or a footer. The points are in percentages, so the wave
+              scales with the element.
+            </p>
+          </details>
+          <details>
+            <summary>Does the CSS clip-path wave work in all browsers?</summary>
+            <p>
+              Yes. <code>clip-path: polygon()</code> is supported in all modern
+              browsers, including Chrome, Firefox, Safari and Edge.
+            </p>
+          </details>
+          <details>
+            <summary>
+              How do I put the wave on the top edge instead of the bottom?
+            </summary>
+            <p>
+              Turn on "Invert clip". The polygon is then anchored to the top of
+              the element instead of the bottom.
+            </p>
+          </details>
+          <details>
+            <summary>Is Wave Generator free?</summary>
+            <p>
+              Yes. Wave Generator is free to use, with no sign-up, and the
+              generated CSS can be used in personal and commercial projects.
+            </p>
+          </details>
+        </section>
+
         <footer class="footer">
           <div class="footer-content">
             <div class="app-info">
-              <img src="/logo.png" alt="Wave Generator Logo" class="logo" />
+              <img
+              src="/logo.png"
+              alt="Wave Generator logo"
+              class="logo"
+              width="50"
+              height="50"
+            />
               <h2 class="app-name">Wave Generator</h2>
             </div>
             <div class="links">
@@ -305,11 +461,11 @@
         </footer>
       </div>
     </div>
+    <script src="./index.js"></script>
+    <script
+      defer
+      data-domain="wavegenerator.app"
+      src="https://plausible.io/js/script.js"
+    ></script>
   </body>
-  <script src="./index.js"></script>
-  <script
-    defer
-    data-domain="wavegenerator.app"
-    src="https://plausible.io/js/script.js"
-  ></script>
 </html>
