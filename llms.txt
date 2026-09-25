@@ -12,7 +12,7 @@ Use it to add wavy edges to hero sections, section dividers, cards, headers and 
 - **Frequency** (0.1–10): number of full wave cycles across the width.
 - **Phase** (0–180°): horizontal shift of the wave.
 - **Points** (5–100): number of polygon points. More points give a smoother curve.
-- **Invert clip**: anchors the polygon to the top edge instead of the bottom, so the wave sits on top of the element.
+- **Invert clip**: by default the element keeps the area below the wave, so the wave forms its top edge. Invert keeps the area above the wave instead, so the wave forms the bottom edge.
 - **Randomize**: picks random values for all parameters.
 
 ## How the wave is computed

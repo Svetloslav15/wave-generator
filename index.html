@@ -71,7 +71,7 @@
             "featureList": [
               "Live wave preview",
               "Adjustable width, height, offset, amplitude, frequency, phase and point count",
-              "Inverted clip for top-edge waves",
+              "Inverted clip for bottom-edge waves",
               "Randomize wave parameters",
               "Copy CSS clip-path to clipboard"
             ],
@@ -102,10 +102,10 @@
               },
               {
                 "@type": "Question",
-                "name": "How do I put the wave on the top edge instead of the bottom?",
+                "name": "How do I put the wave on the bottom edge instead of the top?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Turn on \"Invert clip\". The polygon is then anchored to the top of the element instead of the bottom."
+                  "text": "Turn on \"Invert clip\". By default the element keeps the area below the wave; inverted, it keeps the area above it, so the wave becomes the bottom edge."
                 }
               },
               {
@@ -375,8 +375,8 @@
               <strong>points</strong> controls how smooth it is.
             </li>
             <li>
-              Turn on <strong>Invert clip</strong> to put the wave on the top
-              edge instead of the bottom, or press
+              Turn on <strong>Invert clip</strong> to put the wave on the bottom
+              edge instead of the top, or press
               <strong>Randomize</strong> for a starting point.
             </li>
             <li>
@@ -404,11 +404,12 @@
           </details>
           <details>
             <summary>
-              How do I put the wave on the top edge instead of the bottom?
+              How do I put the wave on the bottom edge instead of the top?
             </summary>
             <p>
-              Turn on "Invert clip". The polygon is then anchored to the top of
-              the element instead of the bottom.
+              Turn on "Invert clip". By default the element keeps the area below
+              the wave; inverted, it keeps the area above it, so the wave becomes
+              the bottom edge.
             </p>
           </details>
           <details>
