@@ -271,12 +271,12 @@
                 />
               </div>
               <div class="el-wrapper">
-                <label for="phase">Phase (0-180&deg;)</label>
+                <label for="phase">Phase (0-360&deg;)</label>
                 <input
                   type="range"
                   id="phase-range"
                   min="0"
-                  max="180"
+                  max="360"
                   step="5"
                   value="0"
                   oninput="syncInput('phase', this.value)"
@@ -287,7 +287,7 @@
                   value="0"
                   step="5"
                   min="0"
-                  max="180"
+                  max="360"
                   oninput="syncRange('phase', this.value)"
                 />
               </div>
@@ -332,6 +332,22 @@
                   oninput="updateWaveColor(this.value)"
                 />
               </div>
+              <div class="el-wrapper toggle-row">
+                <label for="centered">Center arch</label>
+                <label class="toggle">
+                  <input type="checkbox" id="centered" onchange="generateWave()" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="el-wrapper select-row">
+                <label for="units">Output units</label>
+                <select id="units" onchange="generateWave()">
+                  <option value="%">% (stretch)</option>
+                  <option value="px">px (fixed depth)</option>
+                  <option value="vw">vw (full width)</option>
+                </select>
+              </div>
+              <p id="units-hint" class="hint"></p>
             </div>
 
             <div class="control-actions">
