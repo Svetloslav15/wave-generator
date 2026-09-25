@@ -299,6 +299,45 @@ select option {
   margin-top: -2px;
 }
 
+/* ── Import ── */
+.import-group summary {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.import-group[open] summary {
+  margin-bottom: 12px;
+}
+
+.import-group textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #a5d6ff;
+  background: rgba(0, 0, 0, 0.4);
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.import-group textarea:focus {
+  border-color: var(--accent);
+}
+
+.import-group .btn {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.hint.error {
+  color: #fc8181;
+}
+
 /* ── Buttons ── */
 .control-actions {
   display: flex;

@@ -167,6 +167,24 @@
 
         <main>
           <div id="controls">
+            <details class="control-group import-group">
+              <summary class="group-title">Import existing clip-path</summary>
+              <textarea
+                id="importInput"
+                rows="3"
+                spellcheck="false"
+                aria-label="Existing clip-path"
+                placeholder="clip-path: polygon(100% 100%, 0% 100%, 0.00% 96.67%, ...);"
+              ></textarea>
+              <button
+                onclick="importClipPath()"
+                id="importButton"
+                class="btn btn-secondary"
+              >
+                <i class="fas fa-file-import"></i> Import
+              </button>
+              <p id="import-message" class="hint" role="status"></p>
+            </details>
             <div class="control-group">
               <h3 class="group-title">Dimensions</h3>
               <div class="el-wrapper">
