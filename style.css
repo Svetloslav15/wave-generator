@@ -524,70 +524,165 @@ select option {
 /* ── Page Layout ── */
 .page-wrapper {
   display: flex;
-  gap: 20px;
-  max-width: 1600px;
+  gap: 24px;
+  max-width: 1760px;
   margin: 0 auto;
+  padding: 0 16px;
   align-items: start;
-  justify-content: space-around;
-}
-
-/* ── Ad Sidebar (kept from existing) ── */
-.ad-sidebar {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: sticky;
-  top: 20px;
-}
-
-.ad-block {
-  background: white;
-  border-radius: 12px;
-  padding: 20px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
-  border: 3px dashed #cbd5e0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 200px;
 }
 
-.ad-block:hover {
-  border-color: #667eea;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+.main-content {
+  flex: 1;
+  min-width: 0;
 }
 
-.ad-icon {
-  font-size: 48px;
-  margin-bottom: 15px;
-  opacity: 0.3;
+/* ── Sponsor Ads ── */
+:root {
+  --ad-rail-width: 280px;
 }
 
-.ad-text {
-  font-size: 18px;
+@media (min-width: 1680px) {
+  :root {
+    --ad-rail-width: 320px;
+  }
+}
+
+.ad-rail {
+  flex: 0 0 var(--ad-rail-width);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: sticky;
+  top: 24px;
+  margin-top: 24px;
+}
+
+/* Empty column mirroring the rail so the tool stays centered */
+.page-wrapper::after {
+  content: "";
+  flex: 0 0 var(--ad-rail-width);
+}
+
+.ad-label {
+  font-size: 10px;
   font-weight: 600;
-  color: #4a5568;
-  margin-bottom: 10px;
-  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-muted);
+  text-align: center;
 }
 
-.ad-price {
-  font-size: 24px;
+.ad-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: rgba(102, 94, 240, 0.18);
+  text-decoration: none;
+  transition: border-color var(--transition), background-color var(--transition),
+    transform var(--transition);
+}
+
+.ad-card:hover {
+  border-color: var(--accent-hover);
+  background: rgba(102, 94, 240, 0.28);
+  transform: translateY(-2px);
+}
+
+.ad-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+.ad-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 4px 4px;
+  text-align: center;
+}
+
+.ad-name {
+  font-size: 15px;
   font-weight: 700;
-  color: #667eea;
-  margin-bottom: 5px;
 }
 
-.ad-period {
-  font-size: 13px;
-  color: #718096;
+.ad-cta {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-hover);
+}
+
+.ad-cta i {
+  margin-left: 4px;
+  font-size: 10px;
+  color: inherit;
+  transition: transform var(--transition);
+}
+
+.ad-card:hover .ad-cta i {
+  transform: translateX(3px);
+}
+
+/* Shown in place of the side rails when there is no room for them */
+.ad-inline {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 640px;
+  margin: 8px auto 0;
+  padding: 0 16px;
+}
+
+.ad-card-inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+.ad-card-inline img {
+  width: 45%;
+  flex-shrink: 0;
+}
+
+.ad-card-inline .ad-body {
+  text-align: left;
+  padding: 0 4px;
+}
+
+@media (max-width: 1439px) {
+  .ad-rail,
+  .page-wrapper::after {
+    display: none;
+  }
+
+  .page-wrapper {
+    padding: 0;
+  }
+
+  .ad-inline {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-card-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ad-card-inline img {
+    width: 100%;
+  }
+
+  .ad-card-inline .ad-body {
+    text-align: center;
+  }
 }
 
 /* ── Responsive ── */
